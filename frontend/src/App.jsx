@@ -3,7 +3,7 @@ import { ChevronDown, BarChart3, Bot, Send, Download, RefreshCw, Loader2, Messag
 
 // --- SERVICE LOGIC (FASTAPI INTEGRATION - Integrated into this file) ---
 const MOCK_API_BASE = 'http://localhost:8000/api/v1';
-
+//chikll
 /**
  * Calls the FastAPI /evaluate endpoint to run the Fuzzy Logic system.
  */
