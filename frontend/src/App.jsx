@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { ChevronDown, BarChart3, Bot, Send, Download, RefreshCw, Loader2, MessageSquare } from 'lucide-react';
+import FuzzyGraph from "./ui/FuzzyGraph";
 
 // --- SERVICE LOGIC (FASTAPI INTEGRATION - Integrated into this file) ---
 const MOCK_API_BASE = 'http://localhost:8000/api/v1';
@@ -545,6 +546,18 @@ const App = () => {
                             onGetSuggestion={handleGetSuggestion}
                             onDownloadReport={handleDownloadReport}
                             isLoading={isLoading}
+                        />
+                    </div>
+
+                    <div style={{ marginTop: '48px', marginBottom: '48px' }}>
+                        <h2 className="font-bold card-title" style={{ color: 'black', marginBottom: '16px' }}>
+                            Visual Inference Engine
+                        </h2>
+
+                        {/* Pass the whole inputs object and the result object */}
+                        <FuzzyGraph 
+                            inputs={evaluationInputs} 
+                            result={evaluationResult} 
                         />
                     </div>
 
